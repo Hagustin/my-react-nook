@@ -1,13 +1,16 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Header from './components/header';
+import Navigation from './components/navigation';
+import Footer from './components/footer';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import { useLocation } from 'react-router-dom';
 
-function App() {
+
+function App() { // App component
+  const location = useLocation();
   return (
     <Router>
       <Header />
