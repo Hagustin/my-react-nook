@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; // Remove the Router import
 import Header from './components/header';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -6,13 +7,10 @@ import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import { useLocation } from 'react-router-dom';
 
-
-function App() { // App component
-  const location = useLocation();
+function App() {
   return (
-    <Router>
+    <div>
       <Header />
       <Navigation />
       <Routes>
@@ -22,7 +20,7 @@ function App() { // App component
         <Route path="/resume" element={<Resume />} />
       </Routes>
       <Footer />
-    </Router>
+    </div>
   );
 }
 

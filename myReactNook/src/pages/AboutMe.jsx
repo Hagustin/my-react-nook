@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutMe.css'; // Optional for styling
+import HenryImage from '../assets/Henry.jpg';
 
 const AboutMe = () => {
   return (
@@ -7,8 +7,8 @@ const AboutMe = () => {
       <h2 className="mb-3">About Me</h2>
       <div className="d-flex align-items-center">
         <img
-          src="/path/to/your-photo.jpg"
-          alt="Your Name"
+          src={HenryImage}
+          alt="Henry Narciso Agustin"
           className="img-thumbnail me-4"
           style={{ width: '150px', height: '150px', borderRadius: '50%' }}
         />

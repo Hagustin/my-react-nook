@@ -1,63 +1,53 @@
+import React from 'react';
 import { useState } from 'react';
+import Project from '../components/project';
 
 function Portfolio() {
-  // More sample projects with useState
   const [projects] = useState([
     {
-      name: 'Mine Game',
-      description: 'MERN Stack application for surfers to track weather and tides',
-      link: 'https://github.com', // Replace with your actual deployed link
-      repo: 'https://github.com', // Replace with your actual repo link
+      name: 'grubSocial',
+      description: 'Social media for food lovers',
+      link: 'https://github.com/yourusername/surfReport',
+      repo: 'https://github.com/yourusername/surfReport',
     },
     {
-      name: 'Grub Social',
-      description: 'MERN Stack application for collaborative puzzle-solving',
-      link: 'https://github.com', // Replace with your actual deployed link
-      repo: 'https://github.com', // Replace with your actual repo link
+      name: 'findYourHatGame',
+      description: 'An interactive terminal game.',
+      link: 'https://github.com/yourusername/pastelPuzzels',
+      repo: 'https://github.com/yourusername/pastelPuzzels',
     },
     {
-      name: 'Run Buddy',
-      description: 'HTML/CSS landing page for fitness trainers',
-      link: 'https://github.com', // Replace with your actual deployed link
-      repo: 'https://github.com', // Replace with your actual repo link
+      name: 'Workforce-Organizer',
+      description: 'Manage a company’s employee database',
+      link: 'https://github.com/yourusername/runBuddy',
+      repo: 'https://github.com/yourusername/runBuddy',
     },
     {
-      name: 'Calculator',
-      description: 'React/JavaScript/CSS calculator with a modern UI',
-      link: 'https://github.com', // Replace with your actual deployed link
-      repo: 'https://github.com', // Replace with your actual repo link
+      name: 'Forecastify',
+      description: 'A responsive web application built with TypeScript and Vite that displays real-time weather information using the OpenWeather API.',
+      link: 'https://github.com/yourusername/ledWall',
+      repo: 'https://github.com/yourusername/ledWall',
     },
     {
-      name: 'Weather Dashboard',
-      description: 'JavaScript/CSS API-based weather application',
-      link: 'https://github.com', // Replace with your actual deployed link
-      repo: 'https://github.com', // Replace with your actual repo link
+      name: 'Vehicle-Manager',
+      description: 'Vehicle Manager is a command-line application that allows users to create and manage various types of vehicles, including cars, trucks, and motorbikes',
+      link: 'https://github.com/yourusername/calculator',
+      repo: 'https://github.com/yourusername/calculator',
     },
   ]);
 
   return (
-    <section id="portfolio" className="container mt-5">
-      <h2 className="mb-3">Portfolio</h2>
-      <div className="row">
+    <div>
+      <div className="flex-row">
         {projects.map((project, idx) => (
-          <div key={`project-${idx}`} className="col-md-4 mb-4">
-            <div className="card" style={{ width: '18rem' }}>
-              <div className="card-body">
-                <h5 className="card-title">{project.name}</h5>
-                <p className="card-text">{project.description}</p>
-                <a href={project.link} className="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">
-                  Live Demo
-                </a>
-                <a href={project.repo} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                  GitHub Repo
-                </a>
-              </div>
-            </div>
-          </div>
+          <Project
+            project={project}
+            key={"project" + idx}
+          />
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Portfolio;
