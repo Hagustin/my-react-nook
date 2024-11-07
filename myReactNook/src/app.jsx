@@ -1,5 +1,6 @@
+// App.jsx
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Remove the Router import
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -25,3 +26,4 @@ function App() {
 }
 
 export default App;
+
